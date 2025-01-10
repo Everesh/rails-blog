@@ -78,7 +78,7 @@
     max-width: 50%;
   }
 
-  button {
+  button, input[type="submit"] {
     background-color: var(--text);
     color: var(--surface-1);
     border-radius: 8px;
@@ -86,7 +86,7 @@
     padding: 0.4em 1em;
   }
 
-  button:hover {
+  button:hover, input[type="submit"]:hover {
     background-color: var(--surface-1);
     color: var(--text);
     border: solid 2px var(--text);
