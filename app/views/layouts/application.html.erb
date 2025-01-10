@@ -23,7 +23,9 @@
 
   <body>
     <nav>
-      <%= image_tag image_path("logo.svg"), class: "logo" %>
+      <%= link_to root_path do %>
+        <%= image_tag image_path("logo.svg"), class: "logo" %>
+      <% end %>
       <%= link_to "Home", root_path %>
       <%= button_to "Log out", session_path, method: :delete if authenticated? %>
       <%= link_to "Login", new_session_path unless authenticated? %>
