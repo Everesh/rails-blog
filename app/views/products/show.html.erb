@@ -1,8 +1,13 @@
 <% content_for :title, @product.name %>
 
-<p><%= link_to "Back", products_path %></p>
+<% content_for :head do %>
+    <%= stylesheet_link_tag "product_show", "data-turbo-track": "reload" %>
+<% end %>
+
+<p><%= link_to "< Back", products_path %></p>
 
 <section id="product">
+
     <%= image_tag @product.featured_image if @product.featured_image.attached? %>
 
     <section class="product-info">
@@ -12,8 +17,11 @@
         <% end %>
 
         <% if authenticated? %>
-            <%= link_to "Edit", edit_product_path(@product) %>
-            <%= button_to "Delete", @product, method: :delete, data: { turbo_confirm: "Are you sure?" } %>
+            <div style="display: flex; felx-direction: column; justify-content: flex-start; aligh-items: center; margin-top: 1em; gap: 2em;">
+                <%= link_to "Edit", edit_product_path(@product) %>
+                <%= button_to "Delete", @product, method: :delete, data: { turbo_confirm: "Are you sure?" } %>
+            
+            </div>
         <% end %>
     </section>
 </section>

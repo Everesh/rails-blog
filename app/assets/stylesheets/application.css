@@ -62,26 +62,9 @@
 
     background-color: var(--surface-1);
   }
-
-  main h1 {
-    padding: 2rem 3rem;
-    margin: 0;
-  }
   
   .notice {
     color: green;
-  }
-  
-  section#product {
-    display: flex;
-    gap: 1rem;
-    flex-direction: row;
-  }
-  
-  section#product img {
-    border-radius: 8px;
-    flex-basis: 50%;
-    max-width: 50%;
   }
 
   button, input[type="submit"] {
