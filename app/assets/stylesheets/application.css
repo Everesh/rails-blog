@@ -8,28 +8,58 @@
  *
  * Consider organizing styles into separate files for maintainability.
  */
+  :root {
+    box-sizing: border-box;
+
+    --surface-0: #242424;
+    --surface-1: #2c2c2c;
+    --surface-2: #333;
+    --text: #ebd198;
+  }
+
   body {
     font-family: Arial, Helvetica, sans-serif;
     padding: 1rem;
+    margin: 0;
+    padding: 0;
+
+    background-color: var(--surface-0);
+    color: var(--text);
+  }
+
+  a {
+    color: var(--text);
   }
   
   nav {
     justify-content: flex-end;
+    align-items: center;
     display: flex;
     font-size: 0.875em;
-    gap: 0.5rem;
+    gap: 1rem;
     max-width: 1024px;
     margin: 0 auto;
-    padding: 1rem;
+    padding: 1.5rem;
+
+    background-color: var(--surface-2);
   }
   
   nav a {
     display: inline-block;
+    text-decoration: none;
   }
   
   main {
-    max-width: 1024px;
+    width: 1024px;
     margin: 0 auto;
+    min-height: calc(100vh - 5rem);
+
+    background-color: var(--surface-1);
+  }
+
+  main h1 {
+    padding: 2rem 3rem;
+    margin: 0;
   }
   
   .notice {
@@ -46,5 +76,19 @@
     border-radius: 8px;
     flex-basis: 50%;
     max-width: 50%;
+  }
+
+  button {
+    background-color: var(--text);
+    color: var(--surface-1);
+    border-radius: 8px;
+    border: solid 2px var(--text);
+    padding: 0.4em 1em;
+  }
+
+  button:hover {
+    background-color: var(--surface-1);
+    color: var(--text);
+    border: solid 2px var(--text);
   }
   
